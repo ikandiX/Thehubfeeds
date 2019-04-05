@@ -6,19 +6,11 @@
 		<style type="text/css">
 			@import url('https://fonts.googleapis.com/css?family=Anton|Roboto');
 				body {
-					font-family: 'Roboto', sans-serif;
-					font-size: 14px;
-					padding: 0;
-					color: #bfbfbf;
-				}
-			
-			
-			        a {
 					
-					color: #bfbfbf;
-			
-			
+					padding: 0;
+					margin:0;
 				}
+
 
 				.container{
 					margin: 10px auto;
@@ -26,12 +18,37 @@
 					min-height: 25px;
 				}
 
-				.card {
+				
+.overlay {
+  position: relative;
+  &:before {
+    content: '';
+    transition: opacity ease 500ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0;
+  }
+  &:hover, &:active, &:focus {
+    &:before {
+      opacity: .5;
+    }
+  }
+}
 
-					width:100%;
-					margin-bottom: 30px;
-					margin-top: 25px;
-				}
+// Cosmetics
+
+.image {
+  width: 500px;
+  margin: 40px auto 0;
+  img {
+      width: 100%;
+      height: auto;
+  }
+}
 
 				@media only screen and (max-width: 750px) {
 
@@ -42,24 +59,15 @@
 
 				}
 
-				.header, .action {
-					margin: 20px;
+				.header{
+					line-height:200%;
 					font-weight: bold;
+					font-family: 'Roboto', sans-serif;
+					font-size: 14px;
+					color: #bfbfbf;
 				}
 
-				.content{
-
-					width:100%;
-					height: 600px;
-					
-				}
-
-				.content img{
-
-					max-width: 100%;
-					max-height: 100%;
-					
-				}
+		
 
 				.content-ad {
 					width:100%;
@@ -77,21 +85,10 @@
 				  <div class="header">
 				    <i class='fas fa-vial'></i> meme feeds
 				  </div>
-				  <div class="card">
-
-				    <div class="content">
-				          <img src="https://scontent.fkin1-1.fna.fbcdn.net/v/t1.0-9/49698472_792386687790513_6528655653504811008_n.jpg?_nc_cat=108&_nc_ht=scontent.fkin1-1.fna&oh=1c43ee85d92c8edd17ade2799630150c&oe=5D0425B5" />
-				    </div>
-
-				    <div class="action">
-					<a class="facebook customer share" href="https://www.facebook.com/sharer.php?u=https://scontent.fkin1-1.fna.fbcdn.net/v/t1.0-9/49698472_792386687790513_6528655653504811008_n.jpg?_nc_cat=108&_nc_ht=scontent.fkin1-1.fna&oh=1c43ee85d92c8edd17ade2799630150c&oe=5D0425B5" title="Facebook share" target="_blank">
-				          <span class="fa fa-reply"></span>
-					</a>
-				    </div>
-
-				  </div>
-
-				  <!--ad content-->
+				 <div class="overlay image">
+					  <img src="https://images.unsplash.com/photo-1438907046657-4ae137eb8c5e?fit=crop&fm=jpg&h=975&q=80&w=1925" alt="" />
+					</div>
+									  <!--ad content-->
 
 				  <div class="content-ad">
 				  	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -109,34 +106,7 @@
 
 				  <!--ad content-->
 
-				   <div class="card">
-
-				    <div class="content">
-				          <img src="https://scontent.fkin1-1.fna.fbcdn.net/v/t1.0-9/49678685_792318111130704_1363308901348409344_n.jpg?_nc_cat=111&_nc_ht=scontent.fkin1-1.fna&oh=b66906021bf5d7d4b4d028cebfb16890&oe=5D40D760" />
-				    </div>
-
-				    <div class="action">
-					<a class="facebook customer share" href="https://www.facebook.com/sharer.php?u=https://scontent.fkin1-1.fna.fbcdn.net/v/t1.0-9/49678685_792318111130704_1363308901348409344_n.jpg?_nc_cat=111&_nc_ht=scontent.fkin1-1.fna&oh=b66906021bf5d7d4b4d028cebfb16890&oe=5D40D760" title="Facebook share" target="_blank">
-				          <span class="fa fa-reply"></span>
-					</a>
-				    </div>
-
-				  </div>
 				
-				
-				  <div class="card">
-
-				    <div class="content">
-				          <img src="https://scontent.fkin1-1.fna.fbcdn.net/v/t1.0-9/49729309_792193207809861_726296411615789056_n.jpg?_nc_cat=104&_nc_ht=scontent.fkin1-1.fna&oh=8e4c21620550ad2d4e0b91f48034ed55&oe=5D0A8C0A" />
-				    </div>
-
-				    <div class="action">
-					<a class="facebook customer share" href="https://www.facebook.com/sharer.php?u=https://scontent.fkin1-1.fna.fbcdn.net/v/t1.0-9/49729309_792193207809861_726296411615789056_n.jpg?_nc_cat=104&_nc_ht=scontent.fkin1-1.fna&oh=8e4c21620550ad2d4e0b91f48034ed55&oe=5D0A8C0A" title="Facebook share" target="_blank">
-				          <span class="fa fa-reply"></span>
-					</a>
-				    </div>
-
-				  </div>
 
 			</div>
 		<script>
