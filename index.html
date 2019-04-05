@@ -72,7 +72,9 @@
 				    </div>
 
 				    <div class="action">
-				      <span class="fa fa-reply"></span>
+					<a class="facebook customer share" href="https://www.facebook.com/sharer.php?u=" title="Facebook share" target="_blank">
+				          <span class="fa fa-reply"></span>
+					</a>
 				    </div>
 
 				  </div>
@@ -85,32 +87,72 @@
 
 				  <!--ad content-->
 
-				  <div class="card">
+				   <div class="card">
 
 				    <div class="content">
-				          <img src="maury-meme.jpg" />
+				          <img src="when-you-ask-facebook-instagram-meme-pages-about-their-36031712.png" />
 				    </div>
 
 				    <div class="action">
-				      <span class="fa fa-reply"></span>
+					<a class="facebook customer share" href="https://www.facebook.com/sharer.php?u=" title="Facebook share" target="_blank">
+				          <span class="fa fa-reply"></span>
+					</a>
 				    </div>
 
 				  </div>
-
-
+				
+				
 				  <div class="card">
 
 				    <div class="content">
-				          <img src="25726n.jpg" />
+				          <img src="when-you-ask-facebook-instagram-meme-pages-about-their-36031712.png" />
 				    </div>
 
 				    <div class="action">
-				      <span class="fa fa-reply"></span>
+					<a class="facebook customer share" href="https://www.facebook.com/sharer.php?u=" title="Facebook share" target="_blank">
+				          <span class="fa fa-reply"></span>
+					</a>
 				    </div>
 
 				  </div>
 
 			</div>
-	
+		<script>
+			;(function($){
+
+			  /**
+			   * jQuery function to prevent default anchor event and take the href * and the title to make a share popup
+			   *
+			   * @param  {[object]} e           [Mouse event]
+			   * @param  {[integer]} intWidth   [Popup width defalut 500]
+			   * @param  {[integer]} intHeight  [Popup height defalut 400]
+			   * @param  {[boolean]} blnResize  [Is popup resizeabel default true]
+			   */
+			  $.fn.customerPopup = function (e, intWidth, intHeight, blnResize) {
+
+			    // Prevent default anchor event
+			    e.preventDefault();
+
+			    // Set values for window
+			    intWidth = intWidth || '500';
+			    intHeight = intHeight || '400';
+			    strResize = (blnResize ? 'yes' : 'no');
+
+			    // Set title and open popup with focus on it
+			    var strTitle = ((typeof this.attr('title') !== 'undefined') ? this.attr('title') : 'Social Share'),
+				strParam = 'width=' + intWidth + ',height=' + intHeight + ',resizable=' + strResize,            
+				objWindow = window.open(this.attr('href'), strTitle, strParam).focus();
+			  }
+
+			  /* ================================================== */
+
+			  $(document).ready(function ($) {
+			    $('.customer.share').on("click", function(e) {
+			      $(this).customerPopup(e);
+			    });
+			  });
+
+			}(jQuery));
+		</script>
 	</body>
 </html>
