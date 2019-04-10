@@ -3474,7 +3474,7 @@
 		<br>	
 		<br>	
 		
-		<p>Meme feeds is optimized for fun and entertainment. This site does not store any files. All contents are provided by non-affiliated third parties.</p>
+		<p>Meme feeds is optimized for fun and entertainment. This site does not store any files. All contents are provided by non-affiliated third parties.<br> MemeFeeds &copy;<span id="autodate"></span>  All Rights Reserved</p>
 			
 		</div>	
 		<script>
@@ -3500,6 +3500,21 @@
 			  });
 
 			}(jQuery));
+			
+			
+			
+			
+			
+			
+			
+			
+			function newDate() {
+ 
+			  return new Date().getFullYear();
+			}
+
+			document.onload = document.getElementById("autodate").innerHTML = ' ' + newDate();
+
 			
 		</script>
 
